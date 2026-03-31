@@ -22,7 +22,7 @@ const Gallery = () => {
                   </div>
                 </a>
                 <div className="col-md-6">
-                  <div className="text pt-5 pl-0 px-lg-5 pl-md-4 ftco-animate">
+                  <div className="text pt-5 pl-0 px-lg-5 pl-md-4 ">
                     <div className="px-4 px-lg-4">
                       <div className="desc">
                         <div className="top">
@@ -67,7 +67,7 @@ const Gallery = () => {
                   </div>
                 </a>
                 <div className="col-md-6">
-                  <div className="text pt-5 px-md-5 ftco-animate">
+                  <div className="text pt-5 px-md-5 ">
                     <div className="px-4 px-lg-4">
                       <div className="desc text-md-right">
                         <div className="top">
@@ -111,7 +111,7 @@ const Gallery = () => {
                   </div>
                 </a>
                 <div className="col-md-6">
-                  <div className="text pt-5 pl-0 px-lg-5 pl-md-4 ftco-animate">
+                  <div className="text pt-5 pl-0 px-lg-5 pl-md-4 ">
                     <div className="px-4 px-lg-4">
                       <div className="desc">
                         <div className="top">
@@ -155,7 +155,7 @@ const Gallery = () => {
                   </div>
                 </a>
                 <div className="col-md-6">
-                  <div className="text pt-5 px-md-5 ftco-animate">
+                  <div className="text pt-5 px-md-5 ">
                     <div className="px-4 px-lg-4">
                       <div className="desc text-md-right">
                         <div className="top">
@@ -198,7 +198,7 @@ const Gallery = () => {
                   </div>
                 </a>
                 <div className="col-md-6">
-                  <div className="text pt-5 pl-0 px-lg-5 pl-md-4 ftco-animate">
+                  <div className="text pt-5 pl-0 px-lg-5 pl-md-4 ">
                     <div className="px-4 px-lg-4">
                       <div className="desc">
                         <div className="top">
@@ -241,7 +241,7 @@ const Gallery = () => {
                   </div>
                 </a>
                 <div className="col-md-6">
-                  <div className="text pt-5 px-md-5 ftco-animate">
+                  <div className="text pt-5 px-md-5 ">
                     <div className="px-4 px-lg-4">
                       <div className="desc text-md-right">
                         <div className="top">
@@ -284,7 +284,7 @@ const Gallery = () => {
                   </div>
                 </a>
                 <div className="col-md-6">
-                  <div className="text pt-5 pl-0 px-lg-5 pl-md-4 ftco-animate">
+                  <div className="text pt-5 pl-0 px-lg-5 pl-md-4 ">
                     <div className="px-4 px-lg-4">
                       <div className="desc">
                         <div className="top">
@@ -327,7 +327,7 @@ const Gallery = () => {
                   </div>
                 </a>
                 <div className="col-md-6">
-                  <div className="text pt-5 px-md-5 ftco-animate">
+                  <div className="text pt-5 px-md-5 ">
                     <div className="px-4 px-lg-4">
                       <div className="desc text-md-right">
                         <div className="top">
@@ -370,7 +370,7 @@ const Gallery = () => {
                   </div>
                 </a>
                 <div className="col-md-6">
-                  <div className="text pt-5 pl-0 px-lg-5 pl-md-4 ftco-animate">
+                  <div className="text pt-5 pl-0 px-lg-5 pl-md-4 ">
                     <div className="px-4 px-lg-4">
                       <div className="desc">
                         <div className="top">

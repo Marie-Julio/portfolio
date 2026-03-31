@@ -7,7 +7,7 @@ const Pricing = () => {
         <div className="container px-md-0">
           <div className="row d-flex no-gutters">
             {/* Carte 1 : Frontend Expert */}
-            <div className="col-md-3 pricing">
+            <div className="col-md-4 pricing">
               <div className="row no-gutters align-items-center">
                 <div
                   className="img w-100 js-fullheight d-flex align-items-center"
@@ -16,7 +16,7 @@ const Pricing = () => {
                       'url(https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80)',
                   }}
                 >
-                  <div className="text p-4 ftco-animate">
+                  <div className="text p-4 ">
                     <h3>Frontend Expert</h3>
                     <ul>
                       <li>
@@ -47,7 +47,7 @@ const Pricing = () => {
             </div>
 
             {/* Carte 2 : Backend & API */}
-            <div className="col-md-3 pricing">
+            <div className="col-md-4 pricing">
               <div className="row no-gutters align-items-center">
                 <div
                   className="img w-100 js-fullheight d-flex align-items-center"
@@ -56,7 +56,7 @@ const Pricing = () => {
                       'url(https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80)',
                   }}
                 >
-                  <div className="text p-4 ftco-animate">
+                  <div className="text p-4 ">
                     <h3>Backend & API</h3>
                     <ul>
                       <li>
@@ -87,7 +87,7 @@ const Pricing = () => {
             </div>
 
             {/* Carte 3 : Bases de données & DevOps */}
-            <div className="col-md-3 pricing">
+            <div className="col-md-4 pricing">
               <div className="row no-gutters align-items-center">
                 <div
                   className="img w-100 js-fullheight d-flex align-items-center"
@@ -96,7 +96,7 @@ const Pricing = () => {
                       'url(https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80)',
                   }}
                 >
-                  <div className="text p-4 ftco-animate">
+                  <div className="text p-4 ">
                     <h3>DB & DevOps</h3>
                     <ul>
                       <li>
@@ -127,7 +127,7 @@ const Pricing = () => {
             </div>
 
             {/* Carte 4 : Méthodologies & Outils */}
-            <div className="col-md-3 pricing">
+            <div className="col-md-4 pricing">
               <div className="row no-gutters align-items-center">
                 <div
                   className="img w-100 js-fullheight d-flex align-items-center"
@@ -136,7 +136,7 @@ const Pricing = () => {
                       'url(https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80)',
                   }}
                 >
-                  <div className="text p-4 ftco-animate">
+                  <div className="text p-4 ">
                     <h3>Méthodologies</h3>
                     <ul>
                       <li>
@@ -156,6 +156,86 @@ const Pricing = () => {
                       </li>
                     </ul>
                     <span className="price">Agile</span>
+                    <p>
+                      <a href="/contact" className="btn-custom">
+                        Contact
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Carte 5 : Data Scientist Junior */}
+            <div className="col-md-4 pricing">
+              <div className="row no-gutters align-items-center">
+                <div
+                  className="img w-100 js-fullheight d-flex align-items-center"
+                  style={{
+                    backgroundImage:
+                      'url(https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80)',
+                  }}
+                >
+                  <div className="text p-4 ">
+                    <h3>Data Scientist Junior</h3>
+                    <ul>
+                      <li>
+                        <span>Python / Pandas</span> Manipulation de données
+                      </li>
+                      <li>
+                        <span>Scikit-learn</span> Modélisation ML
+                      </li>
+                      <li>
+                        <span>Visualisation</span> Matplotlib, Seaborn
+                      </li>
+                      <li>
+                        <span>SQL</span> Extraction de données
+                      </li>
+                      <li>
+                        <span>Statistiques</span> Analyse exploratoire
+                      </li>
+                    </ul>
+                    <span className="price">Junior</span>
+                    <p>
+                      <a href="/contact" className="btn-custom">
+                        Contact
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Carte 6 : Data Analyst / ML */}
+            <div className="col-md-4 pricing">
+              <div className="row no-gutters align-items-center">
+                <div
+                  className="img w-100 js-fullheight d-flex align-items-center"
+                  style={{
+                    backgroundImage:
+                      'url(https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80)',
+                  }}
+                >
+                  <div className="text p-4 ">
+                    <h3>Data Analyst & ML</h3>
+                    <ul>
+                      <li>
+                        <span>Tableau / Power BI</span> Tableaux de bord
+                      </li>
+                      <li>
+                        <span>TensorFlow / PyTorch</span> Deep Learning
+                      </li>
+                      <li>
+                        <span>Big Data</span> Spark, Hadoop
+                      </li>
+                      <li>
+                        <span>Feature Engineering</span> Préparation
+                      </li>
+                      <li>
+                        <span>Modèles</span> Régression, classification
+                      </li>
+                    </ul>
+                    <span className="price">Junior</span>
                     <p>
                       <a href="/contact" className="btn-custom">
                         Contact

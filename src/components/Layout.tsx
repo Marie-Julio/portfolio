@@ -21,7 +21,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       <aside id="colorlib-aside" role="complementary" className="js-fullheight">
         <h1 id="colorlib-logo" className="mb-4 mb-md-5">
           <a href="/" style={{ backgroundImage: 'url(/assets/images/bg_1.jpg)' }}>
-            Marie-Julio Brice DJEGO
+            Brice DJEGO
           </a>
         </h1>
         <nav id="colorlib-main-menu" role="navigation">
@@ -50,7 +50,6 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           </div>
           <p className="pfooter">
             Copyright &copy; {new Date().getFullYear()} | Brice DJEGO<br />
-            <small>Développeur Full Stack</small>
           </p>
         </div>
       </aside>

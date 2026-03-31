@@ -101,10 +101,6 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          {/* Carte Google Maps */}
-          <div className="row d-flex no-gutters">
-            <div id="map" className="map"></div>
-          </div>
         </div>
       </section>
     </Layout>
