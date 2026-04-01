@@ -1,42 +1,15 @@
 services:
-  traefik:
-    image: traefik:v2.10
-    container_name: traefik
-    command:
-      - "--api.insecure=true"               # interface web (optionnel, à désactiver en prod)
-      - "--providers.docker=true"           # auto-détection des conteneurs Docker
-      - "--providers.docker.exposedbydefault=false"
-      - "--entrypoints.web.address=:80"
-      - "--entrypoints.websecure.address=:443"
-      - "--certificatesresolvers.myresolver.acme.tlschallenge=true"
-      - "--certificatesresolvers.myresolver.acme.email=admin@votredomaine.com"   # changez
-      - "--certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json"
-    ports:
-      - "8080:80"
-      - "443:443"
-    volumes:
-      - "/var/run/docker.sock:/var/run/docker.sock:ro"
-      - "./letsencrypt:/letsencrypt"
-    networks:
-      - agpdp                         # utilise le réseau existant
-    restart: always
-
   bricedjego:
     build:
-      context: .        # dossier contenant votre nouvelle app React
+      context: .
       dockerfile: Dockerfile
     container_name: bricedjego
     restart: always
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.bricedjego.rule=Host(`bricedjego.agpdp.com`)"   # votre domaine
-      - "traefik.http.routers.bricedjego.entrypoints=websecure"               # écoute sur HTTPS
-      - "traefik.http.routers.bricedjego.tls=true"                            # active TLS
-      - "traefik.http.routers.bricedjego.tls.certresolver=myresolver"         # utilise le resolver Let's Encrypt
-      - "traefik.http.services.bricedjego.loadbalancer.server.port=80"         # port interne du conteneur
+    ports:
+      - "8080:80"
     networks:
       - agpdp
 
 networks:
   agpdp:
-    external: true                     # utilise le réseau existant
+    external: true
