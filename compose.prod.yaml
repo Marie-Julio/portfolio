@@ -1,15 +1,41 @@
 version: '3.8'
 
 services:
-  react-app:
+  traefik:
+    image: traefik:v2.10
+    container_name: traefik
+    command:
+      - "--api.insecure=true"               # interface web (optionnel, à désactiver en prod)
+      - "--providers.docker=true"           # auto-détection des conteneurs Docker
+      - "--providers.docker.exposedbydefault=false"
+      - "--entrypoints.web.address=:80"
+      - "--entrypoints.websecure.address=:443"
+      - "--certificatesresolvers.myresolver.acme.tlschallenge=true"
+      - "--certificatesresolvers.myresolver.acme.email=admin@votredomaine.com"   # changez
+      - "--certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json"
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+      - "./letsencrypt:/letsencrypt"
+    networks:
+      - agpdp                         # utilise le réseau existant
+    restart: always
+
+  new-react-app:
     build:
-      context: ./react-app
+      context: ./new-react-app        # dossier contenant votre nouvelle app React
       dockerfile: Dockerfile
-    container_name: react-app
+    container_name: new-react-app
     restart: always
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.react-app.rule=Host(`sous-domaine.votredomaine.com`)"
-      - "traefik.http.services.react-app.loadbalancer.server.port=80"
+      - "traefik.http.routers.new-react-app.rule=Host(`react.votredomaine.com`)"   # votre sous-domaine
+      - "traefik.http.services.new-react-app.loadbalancer.server.port=80"          # port interne du conteneur (ex: 80 pour nginx)
     networks:
-      - traefik-public
+      - agpdp
+
+networks:
+  agpdp:
+    external: true                     # utilise le réseau existant
