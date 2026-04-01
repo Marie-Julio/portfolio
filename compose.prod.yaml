@@ -23,7 +23,7 @@ services:
 
   bricedjego:
     build:
-      context: ./bricedjego        # dossier contenant votre nouvelle app React
+      context: .        # dossier contenant votre nouvelle app React
       dockerfile: Dockerfile
     container_name: bricedjego
     restart: always
