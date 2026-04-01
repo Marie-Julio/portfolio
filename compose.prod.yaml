@@ -29,8 +29,11 @@ services:
     restart: always
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.bricedjego.rule=Host(`bricedjego.agpdp.com`)"   # votre sous-domaine
-      - "traefik.http.services.bricedjego.loadbalancer.server.port=80"          # port interne du conteneur (ex: 80 pour nginx)
+      - "traefik.http.routers.bricedjego.rule=Host(`bricedjego.agpdp.com`)"   # votre domaine
+      - "traefik.http.routers.bricedjego.entrypoints=websecure"               # écoute sur HTTPS
+      - "traefik.http.routers.bricedjego.tls=true"                            # active TLS
+      - "traefik.http.routers.bricedjego.tls.certresolver=myresolver"         # utilise le resolver Let's Encrypt
+      - "traefik.http.services.bricedjego.loadbalancer.server.port=80"         # port interne du conteneur
     networks:
       - agpdp
 
